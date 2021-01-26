@@ -18,8 +18,7 @@ body {
 
 .form-area input {
     padding: 10px;
-    color: honeydew;
-    background-color: pink;
+    color: black background-color: pink;
     border-radius: 10px;
 }
 
@@ -51,7 +50,7 @@ body {
 }
 
 .common {
-    margin: 0px 20px;
+    margin: 10px 20px;
     padding: 20px 30px;
     border-radius: 10px;
 }

@@ -22,7 +22,7 @@
 
     <div id="transition-area">
         <div class="row">
-            <div class="col-md-4 ">
+            <div class="col-md-4">
                 <div class="deposit common">
                     <h4>Deposit</h4>
                     <h2>$<span id="currentDeposit">00</span></h2>
@@ -45,7 +45,7 @@
             <div class="col-md-6">
                 <div class="form-area">
                     <h2>Deposit</h2>
-                    <input id="depositAdd" type="text" placeholder="Enter your email" class="form-control">
+                    <input id="depositAdd" type="text" placeholder="$ amount your want to deposit" class="form-control">
                     <br>
                     <button id="deposit" class="btn btn-success">deposit</button>
                 </div>
@@ -53,7 +53,7 @@
             <div class="col-md-6">
                 <div class="form-area">
                     <h2>Withdraw</h2>
-                    <input id="withdrawAmount" type="text" placeholder="Enter your email" class="form-control">
+                    <input id="withdrawAmount" type="text" placeholder="$ amount your want to withdraw" class="form-control">
                     <br>
                     <button id="addWithdraw" class="btn btn-success">withdraw</button>
                 </div>
@@ -98,7 +98,10 @@
         addWithdraw.addEventListener("click", function() {
             // console.log("please click me");
             const withdrawNumber = getInputNumber("withdrawAmount");
-            console.log(withdrawNumber);
+            updateSpanText("currentWithdraw", withdrawNumber);
+            updateSpanText("currentBalance", -1 * withdrawNumber);
+            document.getElementById("withdrawNumber").value = "";
+
 
         })
 
